@@ -45,7 +45,9 @@ data class MessageInfo(
     val sender: String,
     val text: String,
     val avatar: Bitmap?,
-    val open: PendingIntent?
+    val open: PendingIntent?,
+    /** false for a generic app notification (like, voice note, ...): shown compact only, no auto-expand. */
+    val expand: Boolean = true
 )
 
 data class OngoingInfo(val label: String, val startElapsed: Long)
