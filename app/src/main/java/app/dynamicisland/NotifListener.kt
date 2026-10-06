@@ -44,8 +44,8 @@ class NotifListener : NotificationListenerService() {
     override fun onNotificationPosted(sbn: StatusBarNotification) {
         if (!Prefs.enabled(this) || sbn.packageName == packageName) return
         val n = sbn.notification
+        if (n.category != Notification.CATEGORY_MESSAGE) return
         if ((n.flags and Notification.FLAG_GROUP_SUMMARY) != 0) return
-        if ((n.flags and Notification.FLAG_ONGOING_EVENT) != 0) return
 
         val ex = n.extras
         val title = ex.getCharSequence(Notification.EXTRA_TITLE)?.toString().orEmpty()
@@ -53,15 +53,12 @@ class NotifListener : NotificationListenerService() {
             ?: ex.getCharSequence(Notification.EXTRA_BIG_TEXT))?.toString().orEmpty()
         if (title.isBlank() && text.isBlank()) return
 
-        val isMessage = n.category == Notification.CATEGORY_MESSAGE
-
         val avatar = try {
-            n.getLargeIcon()?.loadDrawable(this)?.let { Bitmaps.drawableToBitmap(it) }
-                ?: (if (isMessage) senderAvatar(ex) else null)
+            n.getLargeIcon()?.loadDrawable(this)?.let { Bitmaps.drawableToBitmap(it) } ?: senderAvatar(ex)
         } catch (_: Exception) {
             null
         }
-        IslandBus.message(MessageInfo(sbn.key, title, text, avatar, n.contentIntent, expand = isMessage))
+        IslandBus.message(MessageInfo(sbn.key, title, text, avatar, n.contentIntent))
     }
 
     @Suppress("DEPRECATION")

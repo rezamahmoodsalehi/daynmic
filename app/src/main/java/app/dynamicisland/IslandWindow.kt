@@ -153,17 +153,7 @@ class IslandWindow(private val ctx: Context) {
     fun showMessage(m: MessageInfo) {
         message = m
         refresh()
-        if (m.expand) {
-            h.postDelayed({ if (message === m) expand(5500) }, 150)
-        } else {
-            h.removeCallbacks(autoCollapse)
-            h.postDelayed({ if (message === m) dismissCompactMessage() }, 3200)
-        }
-    }
-
-    private fun dismissCompactMessage() {
-        message = null
-        refresh()
+        h.postDelayed({ if (message === m) expand(5500) }, 150)
     }
 
     fun onConfigChanged() {
