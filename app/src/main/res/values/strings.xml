@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">جزیره پویا</string>
+    <string name="app_subtitle">داینامیک آیلند برای اندروید، دقیقاً دور دوربین شما</string>
+
+    <string name="section_device">دستگاه شما</string>
+    <string name="device_info">موقعیت دوربین: %1$s\nحالت سیستم: %2$s</string>
+    <string name="cam_left">چپ</string>
+    <string name="cam_center">وسط</string>
+    <string name="cam_right">راست</string>
+    <string name="cam_none">بدون نوچ (جزیره مجازی)</string>
+    <string name="theme_dark">تیره</string>
+    <string name="theme_light">روشن</string>
+
+    <string name="section_perms">دسترسی‌ها</string>
+    <string name="perm_overlay">نمایش روی سایر برنامه‌ها</string>
+    <string name="perm_access">دسترسی به اعلان‌ها (پیام‌ها و موسیقی برنامه‌های دیگر)</string>
+    <string name="perm_post">اعلان سرویس</string>
+    <string name="grant">فعال‌سازی</string>
+    <string name="granted">فعال ✓</string>
+
+    <string name="enable_island">فعال بودن جزیره</string>
+
+    <string name="section_test">تست</string>
+    <string name="test_message">پیام شبکه اجتماعی (با پروفایل)</string>
+    <string name="test_music">پخش موسیقی داخلی</string>
+    <string name="pick_audio">انتخاب موسیقی از «فایل‌ها»</string>
+    <string name="test_ongoing">فعالیت پس‌زمینه (تایمر)</string>
+    <string name="stop_all">توقف همه</string>
+
+    <string name="section_style">ظاهر</string>
+    <string name="style_auto">خودکار (تیره/روشن)</string>
+    <string name="style_dark">همیشه تیره</string>
+
+    <string name="need_overlay">ابتدا دسترسی «نمایش روی سایر برنامه‌ها» را فعال کنید</string>
+    <string name="unknown_track">بدون عنوان</string>
+    <string name="demo_title">آرامش صبحگاهی</string>
+    <string name="demo_artist">موسیقی داخلی</string>
+    <string name="ongoing_label">فعالیت پس‌زمینه</string>
+    <string name="open_label">باز کردن</string>
+    <string name="dismiss_label">بستن</string>
+    <string name="stop_label">توقف</string>
+    <string name="channel_name">سرویس جزیره</string>
+    <string name="fg_title">جزیره پویا فعال است</string>
+    <string name="fg_text">برای مدیریت، برنامه را باز کنید</string>
+    <string name="media_channel">کنترل پخش</string>
+    <string name="prev_label">قبلی</string>
+    <string name="next_label">بعدی</string>
+    <string name="play_label">پخش</string>
+    <string name="pause_label">توقف موقت</string>
+    <string name="section_cam">تست موقعیت دوربین</string>
+    <string name="cam_auto">خودکار</string>
+    <string name="cam_btn_left">چپ</string>
+    <string name="cam_btn_center">وسط</string>
+    <string name="cam_btn_right">راست</string>
+    <string name="cam_btn_none">بدون نوچ</string>
+    <string name="test_lock">تست کنترل قفل‌صفحه</string>
+    <string name="lock_hint">موسیقی پخش شد؛ حالا صفحه را قفل کنید تا کنترل‌ها را ببینید</string>
+</resources>
